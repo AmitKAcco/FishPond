@@ -73,9 +73,9 @@ class Pond implements Runnable{
     @Override
     public void run() {
         try{
-                while(fish.size() >= 1){
-                    activity();
-                }
+              while(fish.size() >= 1){
+                  activity();
+              }
 
 
         } catch (Exception e){
