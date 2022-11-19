@@ -76,8 +76,7 @@ class Pond implements Runnable{
               while(fish.size() >= 1){
                   activity();
               }
-
-
+            
         } catch (Exception e){
           System.out.print(e);
         }
