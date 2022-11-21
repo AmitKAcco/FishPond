@@ -48,7 +48,15 @@ class Pond implements Runnable{
                 this.cntFemale--;
             } else if (fishOne.equals("M") && fishTwo.equals("F")) {
                 int rand3 = ran.nextInt(2);
+                int rand4 = ran.nextInt(2);
                 if (rand3 == 0) {
+                    fish.add(fishOne);
+                    this.cntMale++;
+                } else {
+                    fish.add(fishTwo);
+                    this.cntFemale++;
+                }
+                if (rand4 == 0) {
                     fish.add(fishOne);
                     this.cntMale++;
                 } else {
@@ -58,12 +66,20 @@ class Pond implements Runnable{
 
             } else if (fishOne.equals("F") && fishTwo.equals("M")) {
                 int rand3 = ran.nextInt(2);
+                int rand4 = ran.nextInt(2);
                 if (rand3 == 0) {
                     fish.add(fishOne);
                     this.cntFemale++;
                 } else {
                     fish.add(fishTwo);
                     this.cntMale++;
+                }
+                if (rand4 == 0) {
+                    fish.add(fishOne);
+                    this.cntMale++;
+                } else {
+                    fish.add(fishTwo);
+                    this.cntFemale++;
                 }
             }
 
@@ -73,10 +89,10 @@ class Pond implements Runnable{
     @Override
     public void run() {
         try{
-              while(fish.size() >= 1){
-                  activity();
-              }
-            
+             while(fish.size() >= 1){
+                activity();
+             }
+                
         } catch (Exception e){
           System.out.print(e);
         }
